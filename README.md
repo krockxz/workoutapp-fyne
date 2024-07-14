@@ -3,8 +3,11 @@
 
 MyApp is a workout dashboard application where users can add their workout details, including username, workout type, and duration in minutes. The app uses reactive forms to manage and display records and includes a workout service to store, fetch, and filter data. The user list is shown in a table format using Bootstrap, and users can search by name or filter by workout type. When a user clicks on any record, a bar chart is displayed using Chart.js.
 
+```markdown
+
 ![Test Coverage](https://github.com/krockxz/workoutapp-fyne/blob/604b912f639d36f800adf4c1359f1d2f664004e2/Screenshot%202024-07-14%20203831.png)
 
+```markdown
 ## Features
 
 - Add Username, Workout Type, and Workout Minutes
