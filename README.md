@@ -3,12 +3,12 @@
 
 MyApp is a workout dashboard application where users can add their workout details, including username, workout type, and duration in minutes. The app uses reactive forms to manage and display records and includes a workout service to store, fetch, and filter data. The user list is shown in a table format using Bootstrap, and users can search by name or filter by workout type. When a user clicks on any record, a bar chart is displayed using Chart.js.
 
-![Test Coverage](src/assets/img/Screenshot%202024-07-14%20203831.png)
+![Test Coverage](Screenshot 2024-07-14 203831.png)
 
 ## Features
 
 - Add Username, Workout Type, and Workout Minutes
-- Store, Fetch, and Filter Data using a Workout Service
+- Store, Fetch, and Filter Data using a Workout Ser2vice
 - Display User List in a Table Format with Bootstrap
 - Search by Username
 - Filter by Workout Type
@@ -22,7 +22,7 @@ Run `ng serve` for a development server. Navigate to `http://localhost:4200/`. T
 
 The application has comprehensive test coverage:
 
-![Test Coverage](src/assets/img/Screenshot%202024-07-14%20203831.png)
+![Test Coverage](Screenshot 2024-07-14 203831.png)
 
 ## Getting Started
 
