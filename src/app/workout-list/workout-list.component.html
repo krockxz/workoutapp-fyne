@@ -1,0 +1,45 @@
+<div class="row mt-50">
+<div class="col-sm">
+<div class="mb-4">
+    <form [formGroup]="searchForm" class="row g-3">
+      <div class="col-auto">
+        <label for="searchName" class="lable-text">Search by Name</label>
+        <input type="text" class="form-control" id="searchName" placeholder="" formControlName="userName">
+      </div>
+    </form>
+  </div>
+  </div>
+  <div class="col-sm">
+  <div class="mb-4">
+    <form [formGroup]="filterForm" class="row g-3">
+      <div class="col-auto">
+        <label for="filterType" class="lable-text">Filter by Workout Type</label>
+        <select id="filterType" class="form-control" formControlName="workoutType">
+          <option *ngFor="let type of workoutTypes" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">User Name</th>
+        <th scope="col">Number of Workout</th>
+        <th scope="col">Workout Type</th>
+        <th scope="col">Workout Minutes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let workout of dataSource.data | paginate: { itemsPerPage: pageSize, currentPage: pageIndex + 1 }" (click)="onUserClick(workout.userName)">
+        <td>{{ workout.userName }}</td>
+        <td>{{ workout.count }}</td>
+        <td ><span *ngFor="let workoutType of workout.workoutType">{{workoutType.type}},</span></td>
+        <td>{{ workout.workoutMinutes }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <mat-paginator [length]="dataSource.data.length" [pageSize]="pageSize" (page)="handlePageEvent($event)" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+  

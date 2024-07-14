@@ -1,0 +1,7 @@
+
+ <div class="container">
+    <h1>WorkOut Dashboard</h1>
+    <app-workout-form (userSelected)="selectedUser = $event" [selectedUser]="selectedUser"></app-workout-form>
+    <app-workout-list (userSelected)="selectedUser = $event"></app-workout-list>
+     <app-workout-chart [selectedUser]="selectedUser"></app-workout-chart> 
+</div> 

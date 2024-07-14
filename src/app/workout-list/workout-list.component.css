@@ -1,0 +1,17 @@
+.btn-add{
+    color: blue !important;
+    border-radius: 80px !important;
+    width: 180px !important;
+}
+
+::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input, .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+    height: 48px !important;
+}
+
+.form-field-bg{
+    background: #8080803d !important;
+}
+
+::ng-deep  .form-control {
+    background-color: #7da2a838 !important;
+}

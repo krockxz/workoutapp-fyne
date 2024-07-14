@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid-community/styles/ag-grid.css";
+@import "~ag-grid-community/styles/ag-theme-alpine.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input, .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+    height: 48px !important;
+}
+
+.mb-50{
+    margin-bottom: 50px; 
+}
+
+.lable-text{
+    font-size: x-large !important;
+    color: blue !important;
+}
+::ng-deep  .form-control {
+    background-color: #7da2a838 !important;
+}

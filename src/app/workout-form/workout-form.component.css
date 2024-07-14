@@ -1,0 +1,23 @@
+.btn-add{
+    color: blue !important;
+    border-radius: 80px !important;
+    width: 180px !important;
+}
+.mt-50{
+    margin-top: 50px;
+}
+.mb-20{
+    margin-bottom: 20px; 
+}
+.form-field-bg{
+    background: #8080803d !important;
+}
+.btn-add{
+    color: blue;
+    border-radius: 50px;
+    border: 1px solid;
+    width: 170px;
+}
+::ng-deep  .form-control {
+    background-color: #7da2a838 !important;
+}

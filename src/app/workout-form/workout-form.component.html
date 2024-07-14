@@ -1,0 +1,39 @@
+
+   <form [formGroup]="workoutForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="row mt-50">
+        <div class="col-sm">
+    <div class="form-group">
+    
+      <label for="userName" class="lable-text">User Name*</label>
+      <input type="text" class="form-control" id="userName" formControlName="userName" required>
+      <div *ngIf="submitted && f['userName'].errors" class="invalid-feedback">
+        <div *ngIf="f['userName'].errors['required']">User Name is required</div>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm">
+    <div class="form-group">
+      <label for="workoutType" class="lable-text">Workout Type*</label>
+      <select class="form-control" id="workoutType" formControlName="workoutType" required>
+        <option value="">Select Workout Type</option>
+        <option *ngFor="let type of workoutTypes">{{ type }}</option>
+      </select>
+      <div *ngIf="submitted && f['workoutType'].errors" class="invalid-feedback">
+        <div *ngIf="f['workoutType'].errors['required']">Workout Type is required</div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="row mt-50">
+        <div class="col-sm">
+    <div class="form-group">
+      <label for="workoutMinutes" class="lable-text">Workout Minutes*</label>
+      <input type="number" class="form-control" id="workoutMinutes" formControlName="workoutMinutes" required>
+      <div *ngIf="submitted && f['workoutMinutes'].errors" class="invalid-feedback">
+        <div *ngIf="f['workoutMinutes'].errors['required']">Workout Minutes are required</div>
+      </div>
+    </div>
+    </div></div>
+    <button type="submit" class="btn btn-light mt-50 btn-add mb-20">Add Workout</button>
+  </form>
+  
