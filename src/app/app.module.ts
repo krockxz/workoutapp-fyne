@@ -18,7 +18,6 @@ import { WorkoutChartComponent } from './workout-chart/workout-chart.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgChartsModule } from 'ng2-charts';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
