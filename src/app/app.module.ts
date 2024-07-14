@@ -4,8 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-// Datepicker module
-import { ReactiveFormsModule } from '@angular/forms';
 import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { WorkoutListComponent } from './workout-list/workout-list.component';
 import { WorkoutFormComponent } from './workout-form/workout-form.component';
