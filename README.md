@@ -1,10 +1,9 @@
-
 ```markdown
 # MyApp - Workout Dashboard
 
 MyApp is a workout dashboard application where users can add their workout details, including username, workout type, and duration in minutes. The app uses reactive forms to manage and display records and includes a workout service to store, fetch, and filter data. The user list is shown in a table format using Bootstrap, and users can search by name or filter by workout type. When a user clicks on any record, a bar chart is displayed using Chart.js.
 
-![Test Coverage](src\assets\img\Screenshot 2024-07-14 203831.png)
+![Test Coverage](src/assets/img/Screenshot%202024-07-14%20203831.png)
 
 ## Features
 
@@ -23,7 +22,7 @@ Run `ng serve` for a development server. Navigate to `http://localhost:4200/`. T
 
 The application has comprehensive test coverage:
 
-![Test Coverage](src\assets\img\Screenshot 2024-07-14 203831.png)
+![Test Coverage](src/assets/img/Screenshot%202024-07-14%20203831.png)
 
 ## Getting Started
 
@@ -37,8 +36,8 @@ The application has comprehensive test coverage:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/krockxz/workoutapp-fyne.git
+   cd workoutapp-fyne
    ```
 
 2. Install the dependencies:
@@ -89,11 +88,3 @@ If you would like to contribute to this project, please follow these steps:
 4. Push to the branch (`git push origin feature-branch`)
 5. Create a new Pull Request
 
-
-
-### Notes:
-1. Replace `https://github.com/krockxz/workoutapp-fyne` with your actual repository URL.
-2. Update the path to the test coverage screenshot (`src\assets\img\Screenshot 2024-07-14 203831.png`) with the actual path where you place the screenshot in your project directory.
-3. Add any additional information or sections you feel are necessary for your project.
-
-This `README.md` provides a comprehensive overview of your project, including features, setup instructions, and a section for test coverage with the screenshot included.
