@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { WorkoutService } from '../workout.service';
 
 @Component({
   selector: 'app-workout-form',
@@ -7,33 +8,40 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./workout-form.component.css']
 })
 export class WorkoutFormComponent {
-  @Input() selectedUser: any;
-  @Output() userSelected = new EventEmitter<any>();
-
-  workoutForm: FormGroup;
+  workoutForm!: FormGroup;
   submitted = false;
   workoutTypes = ['Cardio', 'Strength', 'Flexibility', 'Balance'];
-
-  constructor(private fb: FormBuilder) {
-    this.workoutForm = this.fb.group({
+  @Input() selectedUser: string | null = null;
+  constructor(private formBuilder: FormBuilder,private workoutService:WorkoutService) { }
+  @Output() userSelected = new EventEmitter<string>();
+  ngOnInit() {
+    this.workoutForm = this.formBuilder.group({
       userName: ['', Validators.required],
       workoutType: ['', Validators.required],
       workoutMinutes: ['', [Validators.required, Validators.min(1)]]
     });
   }
 
-  get f() {
-    return this.workoutForm.controls;
-  }
+  get f() { return this.workoutForm.controls; }
 
   onSubmit() {
     this.submitted = true;
-
+   debugger
     if (this.workoutForm.invalid) {
       return;
     }
+    
+    if (this.workoutForm.valid) {
+      this.workoutService.addWorkout(this.workoutForm.value);
+      if(this.selectedUser){
+        this.userSelected.emit(this.selectedUser);
+      }
+      this.workoutForm.reset();
+    }
 
-    // Perform your logic here
-    this.userSelected.emit(this.selectedUser);
+    // Add workout to the list (implementation depends on the overall app structure)
+    // Reset form after submission
+    this.workoutForm.reset();
+    this.submitted = false;
   }
 }
